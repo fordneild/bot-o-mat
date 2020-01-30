@@ -1,0 +1,17 @@
+.robots--container{
+    width: 400px;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    
+    .robots{
+        -webkit-padding-start: 0px;
+        margin: 0;
+        height: 400px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        .robot--container{
+            list-style-type: none;
+        }
+    }
+}

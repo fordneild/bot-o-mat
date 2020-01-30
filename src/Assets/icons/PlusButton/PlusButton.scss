@@ -1,0 +1,8 @@
+.plus-button{
+    transform: scale(1);
+    cursor: pointer;
+    &:hover{
+        transition: transform 100ms ease-in-out;
+        transform: scale(1.2);
+    }
+}
