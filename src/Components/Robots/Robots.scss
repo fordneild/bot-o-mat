@@ -3,7 +3,11 @@
     border: 1px solid lightgrey;
     display: flex;
     flex-direction: column;
-    
+    .no-robots{
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 22px;
+    }
     .robots{
         -webkit-padding-start: 0px;
         margin: 0;

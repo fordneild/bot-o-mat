@@ -2,5 +2,18 @@
     display: flex;
     border-bottom: 1px solid lightgrey;
     justify-content: space-between;
+    align-items: center;
     padding: 5px 15px;
+    transition: background-color 100ms linear;
+    .left-wrapper{
+        display: flex;
+        align-items: center;
+        .status{
+            width: 15px;
+            height: 15px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+    }
+    
 }

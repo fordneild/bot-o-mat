@@ -10,9 +10,10 @@
 }
 .tasks--container{
     width: 400px;
-    border: 1px solid lightgrey;
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
+    border: 1px solid lightgrey;
     .tasks{
         -webkit-padding-start: 0px;
         margin: 0;

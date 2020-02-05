@@ -1,13 +1,14 @@
 import React from 'react'
 import './Landing.scss'
-import Tasks from '../Tasks';
-import Robots from '../Robots'
+import RobotTaskController from '../RobotTaskController'
+import Legend from '../Legend'
 
 const Landing  = () => {
+    
     return(
         <div className="landing--container">
-            <Tasks />
-            <Robots />
+            <RobotTaskController />
+            <Legend />
         </div>
     )
 }

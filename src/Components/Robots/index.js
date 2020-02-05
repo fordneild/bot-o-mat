@@ -4,44 +4,24 @@ import Robot from "../Robot/";
 import PlusButton from "../../Assets/icons/PlusButton";
 import Modal from "../Modal";
 
-const Robots = props => {
-  const [robots, setRobots] = useState([]);
-  const [showModal, setShowModal] = useState(false)
-
-  const addRobot = (name, type, tasks) => {
-    const robotData = {
-      name: name,
-      type: type,
-      tasks: tasks
-    };
-
-    setRobots(prevRobots => {
-      prevRobots.push(robotData);
-    });
-  };
-
-  const handleClick = () => {
-      console.log("CLICK!")
-      setShowModal(true)
-  }
+const Robots = ({robots = [],handleClick, updateTaskStatus}) => {
 
   return (
     <div className="robots--container">
-        <Modal showModal={showModal} setShowModal={setShowModal}/>
       <div className="header--container">
         <h2>Robots</h2>
-        <PlusButton onClick={handleClick}/>
+      <PlusButton handleClick={handleClick}/>
       </div>
       <ul className="robots">
         {robots && robots.length > 0
           ? robots.map((robotData, index) => {
               return (
                 <li key={index} className="robot--container">
-                  <Robot {...robotData} />
+                  <Robot updateTaskStatus={updateTaskStatus} {...robotData} />
                 </li>
               );
             })
-          : null}
+          : <h1 className="no-robots">Please make a robot</h1>}
       </ul>
     </div>
   );

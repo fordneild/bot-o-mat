@@ -1,0 +1,30 @@
+.legend--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 12px;
+    h3{
+        margin: 0px;
+    }
+    .legend{
+        display: flex;
+        flex-direction: row;
+        -webkit-padding-start: 0px;
+        li{
+            list-style-type: none;
+            min-width: fit-content;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            .key-color{
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

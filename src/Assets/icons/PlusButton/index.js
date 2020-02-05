@@ -1,7 +1,7 @@
 import React from "react";
 import './PlusButton.scss'
 
-const PlusButton = ({height = 16, width = 16, onClick = () => {}}) => {
+const PlusButton = ({height = 16, width = 16, handleClick}) => {
   return (
     <svg
       version="1.1"
@@ -14,7 +14,7 @@ const PlusButton = ({height = 16, width = 16, onClick = () => {}}) => {
       height={height}
       width={width}
       className="plus-button"
-      onClick={onClick}
+      onClick={handleClick}
     >
       <g>
         <g>
