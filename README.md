@@ -5,6 +5,8 @@ Once a task is complete, the task status turns green (I liked this better than d
 Once the robot has finished all of its tasks, it is essentially dead. It can no longer complete new tasks. <br />
 
 ## Getting Started
+To install dependecies, run:
+### `yarn install`
 
 In the project directory, you can run:
 
