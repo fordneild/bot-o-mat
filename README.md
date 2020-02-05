@@ -1,6 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## For the User
 
-## Available Scripts
+Robots complete a number of tasks defined at robot creation. <br />
+Robots work on these tasks one after the other. <br/>
+Once a task is complete, the task status turns green (I liked this better than disappearing) <br />
+Once the robot has finished all of its tasks, it is essentially dead. It can no longer complete new tasks. <br />
+
+## Getting Started
 
 In the project directory, you can run:
 
@@ -9,60 +14,18 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Design
 
-### `yarn test`
+### A quick note
+In my technical interview, I was asked if I had used any of the newest React Hooks that had come out. I had not so I thought this project was a perfect oppurtunity to try them out. Thus the entire project is built with functional components that use React Hooks. Specifically, I used the useState and useEffect hooks.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### intial design
+Initallity, it seemed natural to keep all bussiness logic relating to robots in robots and all logic relating to tasks in tasks. I would then expose necessary functionality to the other class.
 
-### `yarn build`
+###  re-design
+The amount of data that was shared between these two components was larger than I realized so I pivoted into a more MVC framework. Now, the robots class and the Tasks class are as STUPID as I could feasibly make them. All bussiness logic for these models is controlled in RobotTaskController. Although RobotTaskController might not be the most readble class, sharing much of the bussiness logic relating to coordinating tasks and robots one place avoided passing data between sibling components.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
